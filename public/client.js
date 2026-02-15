@@ -1082,6 +1082,7 @@ function handlePing(data) {
     const { iceServers } = data;
     if (iceServers) {
         config.iceServers = iceServers;
+        config.iceTransportPolicy = "relay";
     }
     sendMsg({
         type: 'pong',
